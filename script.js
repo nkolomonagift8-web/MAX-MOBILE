@@ -1,13 +1,14 @@
 /* =========================================================
    MAX MOBILE & GENERAL DEALERS
-   PRODUCT CATALOGUE
+   PREMIUM PRODUCT CATALOGUE
+   TECNO + INFINIX
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* =========================
+    /* =====================================================
        MOBILE MENU
-    ========================= */
+       ===================================================== */
 
     const menuButton = document.getElementById("mobileMenuButton");
     const mobileMenu = document.getElementById("mobileMenu");
@@ -27,9 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    /* =========================
+    /* =====================================================
        SEARCH
-    ========================= */
+       ===================================================== */
 
     const searchButton = document.getElementById("searchButton");
     const searchBox = document.getElementById("searchBox");
@@ -37,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (searchButton && searchBox) {
         searchButton.addEventListener("click", () => {
+
             searchBox.classList.toggle("active");
 
             if (searchBox.classList.contains("active")) {
@@ -44,36 +46,38 @@ document.addEventListener("DOMContentLoaded", () => {
                     searchInput?.focus();
                 }, 150);
             }
+
         });
     }
 
 
-    /* =========================
+    /* =====================================================
        WHATSAPP NUMBER
-       CHANGE THIS LATER
-    ========================= */
+       CHANGE THIS WHEN YOU GIVE ME YOUR REAL NUMBER
+       ===================================================== */
 
     const whatsappNumber = "260000000000";
 
 
-    /* =========================================================
-       MAX MOBILE PRODUCTS
-       ========================================================= */
+    /* =====================================================
+       PRODUCT DATABASE
+       ===================================================== */
 
     const products = [
 
-        /* ================= TECNO ================= */
+        /* =================================================
+           TECNO
+           ================================================= */
 
         {
             id: 1,
             brand: "TECNO",
             name: "SPARK 50",
             category: "Phones",
-            description: "6700mAh battery • 50MP camera • 120Hz display",
+            description: "Modern design • Large battery • Smooth display",
             price: "Contact for Price",
             badge: "NEW",
-            image: "https://www.tecno-mobile.com/zm/phones/product-detail/product/spark-50/",
-            officialPage: "https://www.tecno-mobile.com/zm/phones/product-detail/product/spark-50/"
+            image: "images/tecno-spark-50.jpg"
         },
 
         {
@@ -81,11 +85,10 @@ document.addEventListener("DOMContentLoaded", () => {
             brand: "TECNO",
             name: "CAMON 50",
             category: "Phones",
-            description: "50MP camera • AMOLED display • 6150mAh battery",
+            description: "Powerful camera • Premium display • Long battery",
             price: "Contact for Price",
             badge: "POPULAR",
-            image: "https://www.tecno-mobile.com/zm/phones/tech-specs/techspecs/camon-50/",
-            officialPage: "https://www.tecno-mobile.com/zm/phones/tech-specs/techspecs/camon-50/"
+            image: "images/tecno-camon-50.jpg"
         },
 
         {
@@ -93,11 +96,10 @@ document.addEventListener("DOMContentLoaded", () => {
             brand: "TECNO",
             name: "CAMON 50 PRO",
             category: "Phones",
-            description: "50MP Sony camera • 6500mAh • 45W charging",
+            description: "Pro camera experience • Premium design • Fast charging",
             price: "Contact for Price",
             badge: "PRO",
-            image: "https://www.tecno-mobile.com/phones/product-detail/product/camon-50-pro/",
-            officialPage: "https://www.tecno-mobile.com/phones/product-detail/product/camon-50-pro/"
+            image: "images/tecno-camon-50-pro.jpg"
         },
 
         {
@@ -105,138 +107,89 @@ document.addEventListener("DOMContentLoaded", () => {
             brand: "TECNO",
             name: "SPARK 50 PRO",
             category: "Phones",
-            description: "6000mAh battery • 60W charging • 50MP Sony camera",
+            description: "Powerful performance • Great camera • Fast charging",
             price: "Contact for Price",
             badge: "HOT",
-            image: "https://www.tecno-mobile.com/phones/product-detail/product/spark-50-pro/",
-            officialPage: "https://www.tecno-mobile.com/phones/product-detail/product/spark-50-pro/"
+            image: "images/tecno-spark-50-pro.jpg"
         },
 
 
-        /* ================= INFINIX ================= */
+        /* =================================================
+           INFINIX
+           ================================================= */
 
         {
             id: 5,
             brand: "INFINIX",
             name: "NOTE 50",
             category: "Phones",
-            description: "Premium NOTE series smartphone",
+            description: "Premium NOTE smartphone • Powerful performance",
             price: "Contact for Price",
             badge: "NEW",
-            image: "https://zm.infinixmobility.com/NOTE-50",
-            officialPage: "https://zm.infinixmobility.com/NOTE-50"
+            image: "images/infinix-note-50.jpg"
         },
 
         {
             id: 6,
             brand: "INFINIX",
-            name: "HOT SERIES",
+            name: "NOTE EDGE",
             category: "Phones",
-            description: "Powerful performance with excellent value",
+            description: "Elegant curved display • Powerful performance • Premium design",
             price: "Contact for Price",
-            badge: "HOT",
-            image: "",
-            officialPage: "https://zm.infinixmobility.com/"
+            badge: "PREMIUM",
+            image: "images/infinix-note-edge.jpg"
         },
-
-
-        /* ================= ITEL ================= */
 
         {
             id: 7,
-            brand: "itel",
-            name: "S SERIES",
+            brand: "INFINIX",
+            name: "HOT 60 PRO+",
             category: "Phones",
-            description: "Stylish smartphones built for everyday use",
+            description: "Ultra-slim design • AMOLED display • Long-lasting battery",
             price: "Contact for Price",
-            badge: "POPULAR",
-            image: "",
-            officialPage: "https://www.itel-life.com/products/phone"
+            badge: "HOT",
+            image: "images/infinix-hot-60-pro-plus.jpg"
         },
 
         {
             id: 8,
-            brand: "itel",
-            name: "POWER SERIES",
+            brand: "INFINIX",
+            name: "HOT 70",
             category: "Phones",
-            description: "Long-lasting battery smartphones",
+            description: "Smooth display • Strong battery • Everyday performance",
             price: "Contact for Price",
-            badge: "POWER",
-            image: "",
-            officialPage: "https://www.itel-life.com/products/phone"
+            badge: "NEW",
+            image: "images/infinix-hot-70.jpg"
         },
-
-
-        /* ================= SAMSUNG ================= */
 
         {
             id: 9,
-            brand: "SAMSUNG",
-            name: "GALAXY A56 5G",
+            brand: "INFINIX",
+            name: "SMART 20",
             category: "Phones",
-            description: "6.7 AMOLED • 50MP camera • 5000mAh • 5G",
+            description: "Affordable smartphone • 120Hz display • Strong battery",
             price: "Contact for Price",
-            badge: "5G",
-            image: "https://www.samsung.com/africa_en/smartphones/galaxy-a/galaxy-a56-5g-awesome-light-gray-128gb-sm-a566bzavafb/",
-            officialPage: "https://www.samsung.com/africa_en/smartphones/galaxy-a/galaxy-a56-5g-awesome-light-gray-128gb-sm-a566bzavafb/"
-        },
-
-        {
-            id: 10,
-            brand: "SAMSUNG",
-            name: "GALAXY A SERIES",
-            category: "Phones",
-            description: "Reliable Galaxy smartphones for everyday life",
-            price: "Contact for Price",
-            badge: "GALAXY",
-            image: "",
-            officialPage: "https://www.samsung.com/africa_en/smartphones/galaxy-a/"
-        },
-
-
-        /* ================= VIVO ================= */
-
-        {
-            id: 11,
-            brand: "VIVO",
-            name: "Y SERIES",
-            category: "Phones",
-            description: "Smart design, strong performance and great cameras",
-            price: "Contact for Price",
-            badge: "NEW",
-            image: "",
-            officialPage: "https://www.vivo.com/"
-        },
-
-        {
-            id: 12,
-            brand: "VIVO",
-            name: "V SERIES",
-            category: "Phones",
-            description: "Stylish smartphones with powerful cameras",
-            price: "Contact for Price",
-            badge: "POPULAR",
-            image: "",
-            officialPage: "https://www.vivo.com/"
+            badge: "VALUE",
+            image: "images/infinix-smart-20.jpg"
         }
 
     ];
 
 
-    /* =========================================================
+    /* =====================================================
        PRODUCT GRID
-       ========================================================= */
+       ===================================================== */
 
     const productGrid = document.querySelector(".products-grid");
 
     function createProductCard(product) {
 
-        const hasImage = product.image && product.image.length > 0;
-
         return `
-            <article class="product-card"
-                     data-brand="${product.brand.toLowerCase()}"
-                     data-name="${product.name.toLowerCase()}">
+            <article
+                class="product-card"
+                data-brand="${product.brand.toLowerCase()}"
+                data-name="${product.name.toLowerCase()}"
+            >
 
                 <div class="product-image">
 
@@ -244,28 +197,19 @@ document.addEventListener("DOMContentLoaded", () => {
                         ${product.badge}
                     </span>
 
-                    ${
-                        hasImage
-                        ? `
-                            <img
-                                src="${product.image}"
-                                alt="${product.brand} ${product.name}"
-                                loading="lazy"
-                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                            >
+                    <img
+                        src="${product.image}"
+                        alt="${product.brand} ${product.name}"
+                        loading="lazy"
+                        onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');"
+                    >
 
-                            <div class="phone-placeholder" style="display:none;">
-                                <i class="fas fa-mobile-screen-button"></i>
-                            </div>
-                          `
-                        : `
-                            <div class="phone-placeholder">
-                                <i class="fas fa-mobile-screen-button"></i>
-                            </div>
-                          `
-                    }
+                    <div class="phone-placeholder">
+                        <i class="fas fa-mobile-screen-button"></i>
+                    </div>
 
                 </div>
+
 
                 <div class="product-info">
 
@@ -289,22 +233,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     </div>
 
+
                     <div class="product-actions">
 
                         <button
                             class="order-button"
-                            data-product="${product.brand} ${product.name}">
+                            data-product="${product.brand} ${product.name}"
+                        >
                             <i class="fab fa-whatsapp"></i>
                             ORDER NOW
                         </button>
-
-                        <a
-                            class="details-button"
-                            href="${product.officialPage}"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            DETAILS
-                        </a>
 
                     </div>
 
@@ -315,21 +253,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    /* =====================================================
+       RENDER PRODUCTS
+       ===================================================== */
+
     function renderProducts(list = products) {
 
         if (!productGrid) return;
 
-        productGrid.innerHTML = list
-            .map(createProductCard)
-            .join("");
+        if (list.length === 0) {
+
+            productGrid.innerHTML = `
+                <div class="no-products">
+                    <i class="fas fa-search"></i>
+                    <h3>No products found</h3>
+                    <p>Try searching for another phone or brand.</p>
+                </div>
+            `;
+
+            return;
+        }
+
+        productGrid.innerHTML =
+            list.map(createProductCard).join("");
 
         setupOrderButtons();
     }
 
 
-    /* =========================================================
-       WHATSAPP ORDER BUTTONS
-       ========================================================= */
+    /* =====================================================
+       WHATSAPP ORDER
+       ===================================================== */
 
     function setupOrderButtons() {
 
@@ -341,12 +295,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     button.dataset.product || "mobile phone";
 
                 const message =
-                    `Hello Max Mobile and General Dealers. I am interested in ${productName}. Please send me the current price and availability.`;
+                    `Hello Max Mobile and General Dealers. I am interested in the ${productName}. Please send me the current price, available colours and stock availability.`;
 
-                const url =
+                const whatsappURL =
                     `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-                window.open(url, "_blank");
+                window.open(whatsappURL, "_blank");
+
             });
 
         });
@@ -354,9 +309,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* =========================================================
+    /* =====================================================
        SEARCH PRODUCTS
-       ========================================================= */
+       ===================================================== */
 
     if (searchInput) {
 
@@ -366,11 +321,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 searchInput.value.toLowerCase().trim();
 
             if (!query) {
+
                 renderProducts(products);
+
                 return;
             }
 
-            const filtered =
+
+            const filteredProducts =
                 products.filter(product => {
 
                     return (
@@ -381,56 +339,72 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 });
 
-            renderProducts(filtered);
+
+            renderProducts(filteredProducts);
 
         });
 
     }
 
 
-    /* =========================================================
+    /* =====================================================
        BRAND FILTERS
-       ========================================================= */
+       Works with:
+       data-brand-filter="TECNO"
+       data-brand-filter="INFINIX"
+       data-brand-filter="all"
+       ===================================================== */
 
     document.querySelectorAll("[data-brand-filter]").forEach(button => {
 
         button.addEventListener("click", () => {
 
-            const brand =
+            const selectedBrand =
                 button.dataset.brandFilter.toLowerCase();
 
-            if (brand === "all") {
+
+            document
+                .querySelectorAll("[data-brand-filter]")
+                .forEach(btn => btn.classList.remove("active"));
+
+
+            button.classList.add("active");
+
+
+            if (selectedBrand === "all") {
 
                 renderProducts(products);
 
-            } else {
-
-                const filtered =
-                    products.filter(product =>
-                        product.brand.toLowerCase() === brand
-                    );
-
-                renderProducts(filtered);
+                return;
             }
+
+
+            const filteredProducts =
+                products.filter(product =>
+                    product.brand.toLowerCase() === selectedBrand
+                );
+
+
+            renderProducts(filteredProducts);
 
         });
 
     });
 
 
-    /* =========================================================
-       SMOOTH SCROLLING
-       ========================================================= */
+    /* =====================================================
+       SMOOTH SCROLL
+       ===================================================== */
 
     document.querySelectorAll('a[href^="#"]').forEach(link => {
 
         link.addEventListener("click", event => {
 
-            const targetId =
+            const targetID =
                 link.getAttribute("href");
 
             const target =
-                document.querySelector(targetId);
+                document.querySelector(targetID);
 
             if (!target) return;
 
@@ -446,9 +420,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    /* =========================================================
-       HEADER SCROLL EFFECT
-       ========================================================= */
+    /* =====================================================
+       HEADER SCROLL
+       ===================================================== */
 
     const header =
         document.querySelector(".site-header");
@@ -458,17 +432,21 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!header) return;
 
         if (window.scrollY > 50) {
+
             header.classList.add("scrolled");
+
         } else {
+
             header.classList.remove("scrolled");
+
         }
 
     });
 
 
-    /* =========================================================
+    /* =====================================================
        ACTIVE NAVIGATION
-       ========================================================= */
+       ===================================================== */
 
     const sections =
         document.querySelectorAll("section[id]");
@@ -476,30 +454,40 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks =
         document.querySelectorAll(".desktop-nav a");
 
+
     window.addEventListener("scroll", () => {
 
-        let current = "";
+        let currentSection = "";
+
 
         sections.forEach(section => {
 
             const sectionTop =
                 section.offsetTop - 180;
 
+
             if (window.scrollY >= sectionTop) {
-                current = section.getAttribute("id");
+
+                currentSection =
+                    section.getAttribute("id");
+
             }
 
         });
+
 
         navLinks.forEach(link => {
 
             link.classList.remove("active");
 
+
             if (
                 link.getAttribute("href") ===
-                `#${current}`
+                `#${currentSection}`
             ) {
+
                 link.classList.add("active");
+
             }
 
         });
@@ -507,31 +495,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    /* =========================================================
-       IMAGE ERROR HANDLING
-       ========================================================= */
+    /* =====================================================
+       GLOBAL IMAGE HANDLING
+       ===================================================== */
 
     document.querySelectorAll("img").forEach(img => {
 
         img.addEventListener("error", () => {
 
-            img.style.opacity = "0.2";
+            img.classList.add("image-error");
 
         });
 
     });
 
 
-    /* =========================================================
-       INITIAL LOAD
-       ========================================================= */
+    /* =====================================================
+       PAGE START
+       ===================================================== */
 
     renderProducts();
 
     document.body.classList.add("page-loaded");
 
+
     console.log(
-        "MAX MOBILE — Product catalogue loaded successfully."
+        "MAX MOBILE — TECNO + INFINIX catalogue loaded successfully."
     );
 
 });
