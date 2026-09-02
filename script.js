@@ -1,11 +1,10 @@
-```javascript
 /* =========================================================
    MAX MOBILE & GENERAL DEALERS
    PREMIUM PRODUCT CATALOGUE
    TECNO + INFINIX + ITEL + SAMSUNG + VIVO
    ========================================================= */
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () {
 
     /* =====================================================
        MOBILE MENU
@@ -15,17 +14,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const mobileMenu = document.getElementById("mobileMenu");
 
     if (menuButton && mobileMenu) {
+
         menuButton.addEventListener("click", () => {
+
             mobileMenu.classList.toggle("active");
             menuButton.classList.toggle("active");
+
         });
+
     }
 
     document.querySelectorAll(".mobile-menu a").forEach(link => {
+
         link.addEventListener("click", () => {
+
             mobileMenu?.classList.remove("active");
             menuButton?.classList.remove("active");
+
         });
+
     });
 
 
@@ -38,23 +45,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.getElementById("searchInput");
 
     if (searchButton && searchBox) {
+
         searchButton.addEventListener("click", () => {
 
             searchBox.classList.toggle("active");
 
             if (searchBox.classList.contains("active")) {
+
                 setTimeout(() => {
+
                     searchInput?.focus();
+
                 }, 150);
+
             }
 
         });
+
     }
 
 
     /* =====================================================
        WHATSAPP
-       CHANGE THIS TO YOUR REAL NUMBER LATER
+       CHANGE THIS TO YOUR REAL NUMBER
     ===================================================== */
 
     const whatsappNumber = "260000000000";
@@ -62,6 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        PRODUCT DATABASE
+       30 PHONES
     ===================================================== */
 
     const products = [
@@ -341,83 +355,84 @@ document.addEventListener("DOMContentLoaded", () => {
 
         /* =================================================
            VIVO
+           MATCHES YOUR GITHUB IMAGES FOLDER
         ================================================= */
 
         {
             id: 24,
             brand: "VIVO",
-            name: "V70",
+            name: "V50",
             category: "Phones",
-            description: "Premium vivo smartphone • Powerful performance • Advanced camera",
+            description: "Premium smartphone • Powerful performance • Advanced camera",
             price: "Contact for Price",
             badge: "NEW",
-            image: "images/vivo-v70.jpg"
+            image: "images/vivo-v50.jpg"
         },
 
         {
             id: 25,
             brand: "VIVO",
-            name: "V70 FE",
+            name: "V50 LITE",
             category: "Phones",
-            description: "Premium design • Powerful performance • Great everyday camera",
+            description: "Stylish design • Smooth display • Powerful everyday performance",
             price: "Contact for Price",
-            badge: "NEW",
-            image: "images/vivo-v70-fe.jpg"
+            badge: "POPULAR",
+            image: "images/vivo-v50-lite.jpg"
         },
 
         {
             id: 26,
             brand: "VIVO",
-            name: "V60 LITE 5G",
+            name: "V40",
             category: "Phones",
-            description: "5G smartphone • Stylish design • Smooth everyday performance",
+            description: "Premium design • Powerful performance • Advanced camera",
             price: "Contact for Price",
-            badge: "5G",
-            image: "images/vivo-v60-lite-5g.jpg"
+            badge: "PREMIUM",
+            image: "images/vivo-v40.jpg"
         },
 
         {
             id: 27,
             brand: "VIVO",
-            name: "V50",
+            name: "V40 LITE",
             category: "Phones",
-            description: "6000mAh battery • 90W FlashCharge • Premium portrait camera",
+            description: "Stylish design • Smooth performance • Great everyday camera",
             price: "Contact for Price",
-            badge: "POPULAR",
-            image: "images/vivo-v50.jpg"
+            badge: "NEW",
+            image: "images/vivo-v40-lite.jpg"
         },
 
         {
             id: 28,
             brand: "VIVO",
-            name: "X300 PRO",
+            name: "Y39 5G",
             category: "Phones",
-            description: "Flagship performance • Professional camera experience • Premium design",
+            description: "5G smartphone • Powerful battery • Smooth everyday performance",
             price: "Contact for Price",
-            badge: "FLAGSHIP",
-            image: "images/vivo-x300-pro.jpg"
+            badge: "5G",
+            image: "images/vivo-y39-5g.jpg"
         },
 
         {
             id: 29,
             brand: "VIVO",
-            name: "Y29",
+            name: "Y29 5G",
             category: "Phones",
-            description: "6500mAh battery • 44W FlashCharge • 50MP AI camera",
+            description: "5G smartphone • Long-lasting battery • Powerful everyday performance",
             price: "Contact for Price",
             badge: "HOT",
-            image: "images/vivo-y29.jpg"
+            image: "images/vivo-y29-5g.jpg"
         },
 
         {
             id: 30,
             brand: "VIVO",
-            name: "Y19S PRO",
+            name: "Y19S",
             category: "Phones",
-            description: "6000mAh battery • 44W charging • 50MP rear camera",
+            description: "Reliable smartphone • Long-lasting battery • Great everyday performance",
             price: "Contact for Price",
             badge: "VALUE",
-            image: "images/vivo-y19s-pro.jpg"
+            image: "images/vivo-y19s.jpg"
         }
 
     ];
@@ -506,6 +521,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             </article>
         `;
+
     }
 
 
@@ -537,6 +553,7 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
 
             return;
+
         }
 
 
@@ -545,6 +562,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         setupOrderButtons();
+
     }
 
 
@@ -604,6 +622,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 renderProducts(products);
 
                 return;
+
             }
 
 
@@ -611,17 +630,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 products.filter(product => {
 
                     return (
+
                         product.brand
                             .toLowerCase()
-                            .includes(query) ||
+                            .includes(query)
+
+                        ||
 
                         product.name
                             .toLowerCase()
-                            .includes(query) ||
+                            .includes(query)
+
+                        ||
 
                         product.description
                             .toLowerCase()
                             .includes(query)
+
                     );
 
                 });
@@ -666,13 +691,17 @@ document.addEventListener("DOMContentLoaded", () => {
                     renderProducts(products);
 
                     return;
+
                 }
 
 
                 const filteredProducts =
                     products.filter(product =>
-                        product.brand.toLowerCase() ===
+
+                        product.brand
+                            .toLowerCase() ===
                         selectedBrand
+
                     );
 
 
@@ -708,8 +737,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                 target.scrollIntoView({
+
                     behavior: "smooth",
+
                     block: "start"
+
                 });
 
             });
@@ -813,17 +845,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       START
+       START CATALOGUE
     ===================================================== */
 
     renderProducts();
 
+
     document.body.classList.add("page-loaded");
 
 
+    /* =====================================================
+       CONSOLE CONFIRMATION
+    ===================================================== */
+
     console.log(
-        "MAX MOBILE — TECNO + INFINIX + ITEL + SAMSUNG + VIVO catalogue loaded successfully."
+        "MAX MOBILE — 30-PHONE CATALOGUE LOADED SUCCESSFULLY."
+    );
+
+    console.log(
+        "TECNO: 4 | INFINIX: 5 | ITEL: 8 | SAMSUNG: 6 | VIVO: 7"
     );
 
 });
-```
