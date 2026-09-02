@@ -1,7 +1,8 @@
+```javascript
 /* =========================================================
    MAX MOBILE & GENERAL DEALERS
    PREMIUM PRODUCT CATALOGUE
-   TECNO + INFINIX + ITEL + SAMSUNG
+   TECNO + INFINIX + ITEL + SAMSUNG + VIVO
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -61,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        PRODUCT DATABASE
-       ===================================================== */
+    ===================================================== */
 
     const products = [
 
@@ -335,6 +336,88 @@ document.addEventListener("DOMContentLoaded", () => {
             price: "Contact for Price",
             badge: "PREMIUM",
             image: "images/samsung-galaxy-s25-plus.jpg"
+        },
+
+
+        /* =================================================
+           VIVO
+        ================================================= */
+
+        {
+            id: 24,
+            brand: "VIVO",
+            name: "V70",
+            category: "Phones",
+            description: "Premium vivo smartphone • Powerful performance • Advanced camera",
+            price: "Contact for Price",
+            badge: "NEW",
+            image: "images/vivo-v70.jpg"
+        },
+
+        {
+            id: 25,
+            brand: "VIVO",
+            name: "V70 FE",
+            category: "Phones",
+            description: "Premium design • Powerful performance • Great everyday camera",
+            price: "Contact for Price",
+            badge: "NEW",
+            image: "images/vivo-v70-fe.jpg"
+        },
+
+        {
+            id: 26,
+            brand: "VIVO",
+            name: "V60 LITE 5G",
+            category: "Phones",
+            description: "5G smartphone • Stylish design • Smooth everyday performance",
+            price: "Contact for Price",
+            badge: "5G",
+            image: "images/vivo-v60-lite-5g.jpg"
+        },
+
+        {
+            id: 27,
+            brand: "VIVO",
+            name: "V50",
+            category: "Phones",
+            description: "6000mAh battery • 90W FlashCharge • Premium portrait camera",
+            price: "Contact for Price",
+            badge: "POPULAR",
+            image: "images/vivo-v50.jpg"
+        },
+
+        {
+            id: 28,
+            brand: "VIVO",
+            name: "X300 PRO",
+            category: "Phones",
+            description: "Flagship performance • Professional camera experience • Premium design",
+            price: "Contact for Price",
+            badge: "FLAGSHIP",
+            image: "images/vivo-x300-pro.jpg"
+        },
+
+        {
+            id: 29,
+            brand: "VIVO",
+            name: "Y29",
+            category: "Phones",
+            description: "6500mAh battery • 44W FlashCharge • 50MP AI camera",
+            price: "Contact for Price",
+            badge: "HOT",
+            image: "images/vivo-y29.jpg"
+        },
+
+        {
+            id: 30,
+            brand: "VIVO",
+            name: "Y19S PRO",
+            category: "Phones",
+            description: "6000mAh battery • 44W charging • 50MP rear camera",
+            price: "Contact for Price",
+            badge: "VALUE",
+            image: "images/vivo-y19s-pro.jpg"
         }
 
     ];
@@ -739,7 +822,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     console.log(
-        "MAX MOBILE — TECNO + INFINIX + ITEL + SAMSUNG catalogue loaded successfully."
+        "MAX MOBILE — TECNO + INFINIX + ITEL + SAMSUNG + VIVO catalogue loaded successfully."
     );
 
 });
+```
