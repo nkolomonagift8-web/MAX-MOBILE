@@ -1,7 +1,7 @@
 /* =========================================================
    MAX MOBILE & GENERAL DEALERS
    PREMIUM PRODUCT CATALOGUE
-   TECNO + INFINIX + ITEL
+   TECNO + INFINIX + ITEL + SAMSUNG
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       WHATSAPP NUMBER
-       REPLACE WITH YOUR REAL NUMBER LATER
+       WHATSAPP
+       CHANGE THIS TO YOUR REAL NUMBER LATER
     ===================================================== */
 
     const whatsappNumber = "260000000000";
@@ -61,8 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        PRODUCT DATABASE
-       TECNO + INFINIX + ITEL
-    ===================================================== */
+       ===================================================== */
 
     const products = [
 
@@ -265,6 +264,77 @@ document.addEventListener("DOMContentLoaded", () => {
             price: "Contact for Price",
             badge: "POPULAR",
             image: "images/itel-city-200.jpg"
+        },
+
+
+        /* =================================================
+           SAMSUNG
+        ================================================= */
+
+        {
+            id: 18,
+            brand: "SAMSUNG",
+            name: "GALAXY A56 5G",
+            category: "Phones",
+            description: "5G smartphone • Super AMOLED display • 50MP camera",
+            price: "Contact for Price",
+            badge: "5G",
+            image: "images/samsung-galaxy-a56-5g.jpg"
+        },
+
+        {
+            id: 19,
+            brand: "SAMSUNG",
+            name: "GALAXY A36 5G",
+            category: "Phones",
+            description: "5G performance • Super AMOLED display • Powerful camera",
+            price: "Contact for Price",
+            badge: "5G",
+            image: "images/samsung-galaxy-a36-5g.jpg"
+        },
+
+        {
+            id: 20,
+            brand: "SAMSUNG",
+            name: "GALAXY A26 5G",
+            category: "Phones",
+            description: "5G connectivity • Super AMOLED display • Triple camera",
+            price: "Contact for Price",
+            badge: "5G",
+            image: "images/samsung-galaxy-a26-5g.jpg"
+        },
+
+        {
+            id: 21,
+            brand: "SAMSUNG",
+            name: "GALAXY S25",
+            category: "Phones",
+            description: "Flagship performance • Galaxy AI • Premium camera system",
+            price: "Contact for Price",
+            badge: "FLAGSHIP",
+            image: "images/samsung-galaxy-s25.jpg"
+        },
+
+        {
+            id: 22,
+            brand: "SAMSUNG",
+            name: "GALAXY S25 ULTRA",
+            category: "Phones",
+            description: "Ultra flagship • Galaxy AI • Advanced camera • S Pen",
+            price: "Contact for Price",
+            badge: "ULTRA",
+            image: "images/samsung-galaxy-s25-ultra.jpg"
+        },
+
+        {
+            id: 23,
+            brand: "SAMSUNG",
+            name: "GALAXY S25 PLUS",
+            category: "Phones",
+            description: "Premium Galaxy performance • Large AMOLED display",
+            price: "Contact for Price",
+            badge: "PREMIUM",
+            image: "images/samsung-galaxy-s25-plus.jpg"
         }
 
     ];
@@ -274,7 +344,8 @@ document.addEventListener("DOMContentLoaded", () => {
        PRODUCT GRID
     ===================================================== */
 
-    const productGrid = document.querySelector(".products-grid");
+    const productGrid =
+        document.querySelector(".products-grid");
 
 
     /* =====================================================
@@ -300,7 +371,10 @@ document.addEventListener("DOMContentLoaded", () => {
                         src="${product.image}"
                         alt="${product.brand} ${product.name}"
                         loading="lazy"
-                        onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');"
+                        onerror="
+                            this.style.display='none';
+                            this.parentElement.classList.add('image-missing');
+                        "
                     >
 
                     <div class="phone-placeholder">
@@ -397,36 +471,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function setupOrderButtons() {
 
-        document.querySelectorAll(".order-button").forEach(button => {
+        document
+            .querySelectorAll(".order-button")
+            .forEach(button => {
 
-            button.addEventListener("click", () => {
+                button.addEventListener("click", () => {
 
-                const productName =
-                    button.dataset.product || "mobile phone";
-
-
-                const message =
-                    `Hello Max Mobile and General Dealers. I am interested in the ${productName}. Please send me the current price, available colours and stock availability.`;
-
-
-                const whatsappURL =
-                    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+                    const productName =
+                        button.dataset.product ||
+                        "mobile phone";
 
 
-                window.open(
-                    whatsappURL,
-                    "_blank"
-                );
+                    const message =
+                        `Hello Max Mobile and General Dealers. I am interested in the ${productName}. Please send me the current price, available colours and stock availability.`;
+
+
+                    const whatsappURL =
+                        `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+
+                    window.open(
+                        whatsappURL,
+                        "_blank"
+                    );
+
+                });
 
             });
-
-        });
 
     }
 
 
     /* =====================================================
-       SEARCH PRODUCTS
+       SEARCH
     ===================================================== */
 
     if (searchInput) {
@@ -434,7 +511,9 @@ document.addEventListener("DOMContentLoaded", () => {
         searchInput.addEventListener("input", () => {
 
             const query =
-                searchInput.value.toLowerCase().trim();
+                searchInput.value
+                    .toLowerCase()
+                    .trim();
 
 
             if (!query) {
@@ -449,9 +528,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 products.filter(product => {
 
                     return (
-                        product.brand.toLowerCase().includes(query) ||
-                        product.name.toLowerCase().includes(query) ||
-                        product.description.toLowerCase().includes(query)
+                        product.brand
+                            .toLowerCase()
+                            .includes(query) ||
+
+                        product.name
+                            .toLowerCase()
+                            .includes(query) ||
+
+                        product.description
+                            .toLowerCase()
+                            .includes(query)
                     );
 
                 });
@@ -475,7 +562,8 @@ document.addEventListener("DOMContentLoaded", () => {
             button.addEventListener("click", () => {
 
                 const selectedBrand =
-                    button.dataset.brandFilter.toLowerCase();
+                    button.dataset.brandFilter
+                        .toLowerCase();
 
 
                 document
@@ -500,7 +588,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const filteredProducts =
                     products.filter(product =>
-                        product.brand.toLowerCase() === selectedBrand
+                        product.brand.toLowerCase() ===
+                        selectedBrand
                     );
 
 
@@ -546,7 +635,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       HEADER SCROLL EFFECT
+       HEADER SCROLL
     ===================================================== */
 
     const header =
@@ -641,17 +730,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       PAGE START
+       START
     ===================================================== */
 
     renderProducts();
-
 
     document.body.classList.add("page-loaded");
 
 
     console.log(
-        "MAX MOBILE — TECNO + INFINIX + ITEL catalogue loaded successfully."
+        "MAX MOBILE — TECNO + INFINIX + ITEL + SAMSUNG catalogue loaded successfully."
     );
 
 });
