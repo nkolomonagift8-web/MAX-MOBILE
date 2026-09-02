@@ -1,14 +1,14 @@
 /* =========================================================
    MAX MOBILE & GENERAL DEALERS
    PREMIUM PRODUCT CATALOGUE
-   TECNO + INFINIX
+   TECNO + INFINIX + ITEL
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        MOBILE MENU
-       ===================================================== */
+    ===================================================== */
 
     const menuButton = document.getElementById("mobileMenuButton");
     const mobileMenu = document.getElementById("mobileMenu");
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        SEARCH
-       ===================================================== */
+    ===================================================== */
 
     const searchButton = document.getElementById("searchButton");
     const searchBox = document.getElementById("searchBox");
@@ -53,21 +53,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        WHATSAPP NUMBER
-       CHANGE THIS WHEN YOU GIVE ME YOUR REAL NUMBER
-       ===================================================== */
+       REPLACE WITH YOUR REAL NUMBER LATER
+    ===================================================== */
 
     const whatsappNumber = "260000000000";
 
 
     /* =====================================================
        PRODUCT DATABASE
-       ===================================================== */
+       TECNO + INFINIX + ITEL
+    ===================================================== */
 
     const products = [
 
         /* =================================================
            TECNO
-           ================================================= */
+        ================================================= */
 
         {
             id: 1,
@@ -116,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         /* =================================================
            INFINIX
-           ================================================= */
+        ================================================= */
 
         {
             id: 5,
@@ -167,10 +168,103 @@ document.addEventListener("DOMContentLoaded", () => {
             brand: "INFINIX",
             name: "SMART 20",
             category: "Phones",
-            description: "Affordable smartphone • 120Hz display • Strong battery",
+            description: "Affordable smartphone • Smooth display • Strong battery",
             price: "Contact for Price",
             badge: "VALUE",
             image: "images/infinix-smart-20.jpg"
+        },
+
+
+        /* =================================================
+           ITEL
+        ================================================= */
+
+        {
+            id: 10,
+            brand: "itel",
+            name: "S25 ULTRA",
+            category: "Phones",
+            description: "Slim design • AMOLED display • Stylish everyday smartphone",
+            price: "Contact for Price",
+            badge: "ULTRA",
+            image: "images/itel-s25-ultra.jpg"
+        },
+
+        {
+            id: 11,
+            brand: "itel",
+            name: "S25",
+            category: "Phones",
+            description: "Stylish design • Smooth display • Great everyday performance",
+            price: "Contact for Price",
+            badge: "POPULAR",
+            image: "images/itel-s25.jpg"
+        },
+
+        {
+            id: 12,
+            brand: "itel",
+            name: "POWER 70",
+            category: "Phones",
+            description: "Large battery • Reliable performance • Built for everyday use",
+            price: "Contact for Price",
+            badge: "POWER",
+            image: "images/itel-power-70.jpg"
+        },
+
+        {
+            id: 13,
+            brand: "itel",
+            name: "POWER 80",
+            category: "Phones",
+            description: "Long-lasting battery • Powerful everyday performance",
+            price: "Contact for Price",
+            badge: "POWER",
+            image: "images/itel-power-80.jpg"
+        },
+
+        {
+            id: 14,
+            brand: "itel",
+            name: "A50",
+            category: "Phones",
+            description: "Affordable smartphone • Large display • Reliable battery",
+            price: "Contact for Price",
+            badge: "VALUE",
+            image: "images/itel-a50.jpg"
+        },
+
+        {
+            id: 15,
+            brand: "itel",
+            name: "A60S",
+            category: "Phones",
+            description: "Affordable smartphone • Smooth everyday experience",
+            price: "Contact for Price",
+            badge: "VALUE",
+            image: "images/itel-a60s.jpg"
+        },
+
+        {
+            id: 16,
+            brand: "itel",
+            name: "CITY 100",
+            category: "Phones",
+            description: "Modern smartphone • Stylish design • Everyday performance",
+            price: "Contact for Price",
+            badge: "NEW",
+            image: "images/itel-city-100.jpg"
+        },
+
+        {
+            id: 17,
+            brand: "itel",
+            name: "CITY 200",
+            category: "Phones",
+            description: "Modern design • Strong battery • Great everyday phone",
+            price: "Contact for Price",
+            badge: "POPULAR",
+            image: "images/itel-city-200.jpg"
         }
 
     ];
@@ -178,9 +272,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        PRODUCT GRID
-       ===================================================== */
+    ===================================================== */
 
     const productGrid = document.querySelector(".products-grid");
+
+
+    /* =====================================================
+       CREATE PRODUCT CARD
+    ===================================================== */
 
     function createProductCard(product) {
 
@@ -255,35 +354,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        RENDER PRODUCTS
-       ===================================================== */
+    ===================================================== */
 
     function renderProducts(list = products) {
 
         if (!productGrid) return;
 
+
         if (list.length === 0) {
 
             productGrid.innerHTML = `
                 <div class="no-products">
+
                     <i class="fas fa-search"></i>
-                    <h3>No products found</h3>
-                    <p>Try searching for another phone or brand.</p>
+
+                    <h3>
+                        No products found
+                    </h3>
+
+                    <p>
+                        Try searching for another phone or brand.
+                    </p>
+
                 </div>
             `;
 
             return;
         }
 
+
         productGrid.innerHTML =
             list.map(createProductCard).join("");
+
 
         setupOrderButtons();
     }
 
 
     /* =====================================================
-       WHATSAPP ORDER
-       ===================================================== */
+       WHATSAPP ORDER BUTTONS
+    ===================================================== */
 
     function setupOrderButtons() {
 
@@ -294,13 +404,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 const productName =
                     button.dataset.product || "mobile phone";
 
+
                 const message =
                     `Hello Max Mobile and General Dealers. I am interested in the ${productName}. Please send me the current price, available colours and stock availability.`;
+
 
                 const whatsappURL =
                     `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-                window.open(whatsappURL, "_blank");
+
+                window.open(
+                    whatsappURL,
+                    "_blank"
+                );
 
             });
 
@@ -311,7 +427,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        SEARCH PRODUCTS
-       ===================================================== */
+    ===================================================== */
 
     if (searchInput) {
 
@@ -319,6 +435,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const query =
                 searchInput.value.toLowerCase().trim();
+
 
             if (!query) {
 
@@ -349,87 +466,97 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        BRAND FILTERS
-       Works with:
-       data-brand-filter="TECNO"
-       data-brand-filter="INFINIX"
-       data-brand-filter="all"
-       ===================================================== */
+    ===================================================== */
 
-    document.querySelectorAll("[data-brand-filter]").forEach(button => {
+    document
+        .querySelectorAll("[data-brand-filter]")
+        .forEach(button => {
 
-        button.addEventListener("click", () => {
+            button.addEventListener("click", () => {
 
-            const selectedBrand =
-                button.dataset.brandFilter.toLowerCase();
+                const selectedBrand =
+                    button.dataset.brandFilter.toLowerCase();
 
 
-            document
-                .querySelectorAll("[data-brand-filter]")
-                .forEach(btn => btn.classList.remove("active"));
+                document
+                    .querySelectorAll("[data-brand-filter]")
+                    .forEach(btn => {
+
+                        btn.classList.remove("active");
+
+                    });
 
 
-            button.classList.add("active");
+                button.classList.add("active");
 
 
-            if (selectedBrand === "all") {
+                if (selectedBrand === "all") {
 
-                renderProducts(products);
+                    renderProducts(products);
 
-                return;
-            }
-
-
-            const filteredProducts =
-                products.filter(product =>
-                    product.brand.toLowerCase() === selectedBrand
-                );
+                    return;
+                }
 
 
-            renderProducts(filteredProducts);
+                const filteredProducts =
+                    products.filter(product =>
+                        product.brand.toLowerCase() === selectedBrand
+                    );
 
-        });
 
-    });
+                renderProducts(filteredProducts);
 
-
-    /* =====================================================
-       SMOOTH SCROLL
-       ===================================================== */
-
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-
-        link.addEventListener("click", event => {
-
-            const targetID =
-                link.getAttribute("href");
-
-            const target =
-                document.querySelector(targetID);
-
-            if (!target) return;
-
-            event.preventDefault();
-
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
             });
 
         });
 
-    });
+
+    /* =====================================================
+       SMOOTH SCROLL
+    ===================================================== */
+
+    document
+        .querySelectorAll('a[href^="#"]')
+        .forEach(link => {
+
+            link.addEventListener("click", event => {
+
+                const targetID =
+                    link.getAttribute("href");
+
+
+                const target =
+                    document.querySelector(targetID);
+
+
+                if (!target) return;
+
+
+                event.preventDefault();
+
+
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            });
+
+        });
 
 
     /* =====================================================
-       HEADER SCROLL
-       ===================================================== */
+       HEADER SCROLL EFFECT
+    ===================================================== */
 
     const header =
         document.querySelector(".site-header");
 
+
     window.addEventListener("scroll", () => {
 
         if (!header) return;
+
 
         if (window.scrollY > 50) {
 
@@ -446,10 +573,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        ACTIVE NAVIGATION
-       ===================================================== */
+    ===================================================== */
 
     const sections =
         document.querySelectorAll("section[id]");
+
 
     const navLinks =
         document.querySelectorAll(".desktop-nav a");
@@ -496,31 +624,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       GLOBAL IMAGE HANDLING
-       ===================================================== */
+       IMAGE ERROR HANDLING
+    ===================================================== */
 
-    document.querySelectorAll("img").forEach(img => {
+    document
+        .querySelectorAll("img")
+        .forEach(img => {
 
-        img.addEventListener("error", () => {
+            img.addEventListener("error", () => {
 
-            img.classList.add("image-error");
+                img.classList.add("image-error");
+
+            });
 
         });
-
-    });
 
 
     /* =====================================================
        PAGE START
-       ===================================================== */
+    ===================================================== */
 
     renderProducts();
+
 
     document.body.classList.add("page-loaded");
 
 
     console.log(
-        "MAX MOBILE — TECNO + INFINIX catalogue loaded successfully."
+        "MAX MOBILE — TECNO + INFINIX + ITEL catalogue loaded successfully."
     );
 
 });
