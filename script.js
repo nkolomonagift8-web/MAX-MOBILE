@@ -1,95 +1,38 @@
 /* =========================================================
-   MAX MOBILE & GENERAL DEALERS
-   PREMIUM PRODUCT CATALOGUE
-   TECNO + INFINIX + ITEL + SAMSUNG + VIVO
+   MAX-MOBILE & GENERAL DEALERS
+   MAIN JAVASCRIPT
+   NO SUPABASE
+   NO DATABASE
+   WHATSAPP CATALOGUE
    ========================================================= */
 
-document.addEventListener("DOMContentLoaded", () {
+document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
-       MOBILE MENU
-    ===================================================== */
+       CONFIGURATION
+       ===================================================== */
 
-    const menuButton = document.getElementById("mobileMenuButton");
-    const mobileMenu = document.getElementById("mobileMenu");
-
-    if (menuButton && mobileMenu) {
-
-        menuButton.addEventListener("click", () => {
-
-            mobileMenu.classList.toggle("active");
-            menuButton.classList.toggle("active");
-
-        });
-
-    }
-
-    document.querySelectorAll(".mobile-menu a").forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            mobileMenu?.classList.remove("active");
-            menuButton?.classList.remove("active");
-
-        });
-
-    });
-
-
-    /* =====================================================
-       SEARCH
-    ===================================================== */
-
-    const searchButton = document.getElementById("searchButton");
-    const searchBox = document.getElementById("searchBox");
-    const searchInput = document.getElementById("searchInput");
-
-    if (searchButton && searchBox) {
-
-        searchButton.addEventListener("click", () => {
-
-            searchBox.classList.toggle("active");
-
-            if (searchBox.classList.contains("active")) {
-
-                setTimeout(() => {
-
-                    searchInput?.focus();
-
-                }, 150);
-
-            }
-
-        });
-
-    }
-
-
-    /* =====================================================
-       WHATSAPP
-       CHANGE THIS TO YOUR REAL NUMBER
-    ===================================================== */
-
-    const whatsappNumber = "260000000000";
+    const whatsappNumber = "260977472976";
 
 
     /* =====================================================
        PRODUCT DATABASE
        30 PHONES
-    ===================================================== */
+       ===================================================== */
 
     const products = [
 
-        /* =================================================
+        /* =========================
            TECNO
-        ================================================= */
+           ========================= */
 
         {
             id: 1,
             brand: "TECNO",
             name: "SPARK 50",
             category: "Phones",
-            description: "Modern design • Large battery • Smooth display",
+            description:
+                "Stylish smartphone • Smooth performance • Great everyday experience",
             price: "Contact for Price",
             badge: "NEW",
             image: "images/tecno-spark-50.jpg"
@@ -100,7 +43,8 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "TECNO",
             name: "CAMON 50",
             category: "Phones",
-            description: "Powerful camera • Premium display • Long battery",
+            description:
+                "Advanced camera • Premium design • Powerful everyday performance",
             price: "Contact for Price",
             badge: "POPULAR",
             image: "images/tecno-camon-50.jpg"
@@ -111,7 +55,8 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "TECNO",
             name: "CAMON 50 PRO",
             category: "Phones",
-            description: "Pro camera experience • Premium design • Fast charging",
+            description:
+                "Pro camera experience • Premium display • Powerful performance",
             price: "Contact for Price",
             badge: "PRO",
             image: "images/tecno-camon-50-pro.jpg"
@@ -122,23 +67,25 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "TECNO",
             name: "SPARK 50 PRO",
             category: "Phones",
-            description: "Powerful performance • Great camera • Fast charging",
+            description:
+                "Powerful performance • Stylish design • Excellent everyday phone",
             price: "Contact for Price",
             badge: "HOT",
             image: "images/tecno-spark-50-pro.jpg"
         },
 
 
-        /* =================================================
+        /* =========================
            INFINIX
-        ================================================= */
+           ========================= */
 
         {
             id: 5,
             brand: "INFINIX",
             name: "NOTE 50",
             category: "Phones",
-            description: "Premium NOTE smartphone • Powerful performance",
+            description:
+                "Premium display • Powerful performance • Modern smartphone design",
             price: "Contact for Price",
             badge: "NEW",
             image: "images/infinix-note-50.jpg"
@@ -149,7 +96,8 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "INFINIX",
             name: "NOTE EDGE",
             category: "Phones",
-            description: "Elegant curved display • Powerful performance • Premium design",
+            description:
+                "Stylish edge design • Smooth display • Powerful performance",
             price: "Contact for Price",
             badge: "PREMIUM",
             image: "images/infinix-note-edge.jpg"
@@ -158,9 +106,10 @@ document.addEventListener("DOMContentLoaded", () {
         {
             id: 7,
             brand: "INFINIX",
-            name: "HOT 60 PRO+",
+            name: "HOT 60 PRO PLUS",
             category: "Phones",
-            description: "Ultra-slim design • AMOLED display • Long-lasting battery",
+            description:
+                "Slim design • Smooth display • Powerful everyday performance",
             price: "Contact for Price",
             badge: "HOT",
             image: "images/infinix-hot-60-pro-plus.jpg"
@@ -171,7 +120,8 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "INFINIX",
             name: "HOT 70",
             category: "Phones",
-            description: "Smooth display • Strong battery • Everyday performance",
+            description:
+                "Powerful smartphone • Large display • Long-lasting everyday use",
             price: "Contact for Price",
             badge: "NEW",
             image: "images/infinix-hot-70.jpg"
@@ -182,23 +132,25 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "INFINIX",
             name: "SMART 20",
             category: "Phones",
-            description: "Affordable smartphone • Smooth display • Strong battery",
+            description:
+                "Reliable smartphone • Large display • Great everyday value",
             price: "Contact for Price",
             badge: "VALUE",
             image: "images/infinix-smart-20.jpg"
         },
 
 
-        /* =================================================
+        /* =========================
            ITEL
-        ================================================= */
+           ========================= */
 
         {
             id: 10,
             brand: "itel",
             name: "S25 ULTRA",
             category: "Phones",
-            description: "Slim design • AMOLED display • Stylish everyday smartphone",
+            description:
+                "Stylish design • Smooth display • Reliable everyday performance",
             price: "Contact for Price",
             badge: "ULTRA",
             image: "images/itel-s25-ultra.jpg"
@@ -209,9 +161,10 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "itel",
             name: "S25",
             category: "Phones",
-            description: "Stylish design • Smooth display • Great everyday performance",
+            description:
+                "Modern smartphone • Smooth performance • Great everyday value",
             price: "Contact for Price",
-            badge: "POPULAR",
+            badge: "NEW",
             image: "images/itel-s25.jpg"
         },
 
@@ -220,7 +173,8 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "itel",
             name: "POWER 70",
             category: "Phones",
-            description: "Large battery • Reliable performance • Built for everyday use",
+            description:
+                "Long-lasting battery • Reliable performance • Practical design",
             price: "Contact for Price",
             badge: "POWER",
             image: "images/itel-power-70.jpg"
@@ -231,7 +185,8 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "itel",
             name: "POWER 80",
             category: "Phones",
-            description: "Long-lasting battery • Powerful everyday performance",
+            description:
+                "Powerful battery • Reliable performance • Everyday smartphone",
             price: "Contact for Price",
             badge: "POWER",
             image: "images/itel-power-80.jpg"
@@ -242,7 +197,8 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "itel",
             name: "A50",
             category: "Phones",
-            description: "Affordable smartphone • Large display • Reliable battery",
+            description:
+                "Affordable smartphone • Smooth everyday performance • Great value",
             price: "Contact for Price",
             badge: "VALUE",
             image: "images/itel-a50.jpg"
@@ -253,7 +209,8 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "itel",
             name: "A60S",
             category: "Phones",
-            description: "Affordable smartphone • Smooth everyday experience",
+            description:
+                "Affordable smartphone • Reliable performance • Everyday use",
             price: "Contact for Price",
             badge: "VALUE",
             image: "images/itel-a60s.jpg"
@@ -264,7 +221,8 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "itel",
             name: "CITY 100",
             category: "Phones",
-            description: "Modern smartphone • Stylish design • Everyday performance",
+            description:
+                "Modern design • Reliable performance • Great everyday smartphone",
             price: "Contact for Price",
             badge: "NEW",
             image: "images/itel-city-100.jpg"
@@ -275,23 +233,25 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "itel",
             name: "CITY 200",
             category: "Phones",
-            description: "Modern design • Strong battery • Great everyday phone",
+            description:
+                "Stylish design • Smooth performance • Great everyday experience",
             price: "Contact for Price",
-            badge: "POPULAR",
+            badge: "NEW",
             image: "images/itel-city-200.jpg"
         },
 
 
-        /* =================================================
+        /* =========================
            SAMSUNG
-        ================================================= */
+           ========================= */
 
         {
             id: 18,
             brand: "SAMSUNG",
             name: "GALAXY A56 5G",
             category: "Phones",
-            description: "5G smartphone • Super AMOLED display • 50MP camera",
+            description:
+                "5G smartphone • Premium display • Powerful performance",
             price: "Contact for Price",
             badge: "5G",
             image: "images/samsung-galaxy-a56-5g.jpg"
@@ -302,7 +262,8 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "SAMSUNG",
             name: "GALAXY A36 5G",
             category: "Phones",
-            description: "5G performance • Super AMOLED display • Powerful camera",
+            description:
+                "5G performance • Smooth display • Reliable everyday smartphone",
             price: "Contact for Price",
             badge: "5G",
             image: "images/samsung-galaxy-a36-5g.jpg"
@@ -313,7 +274,8 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "SAMSUNG",
             name: "GALAXY A26 5G",
             category: "Phones",
-            description: "5G connectivity • Super AMOLED display • Triple camera",
+            description:
+                "5G smartphone • Smooth display • Great everyday performance",
             price: "Contact for Price",
             badge: "5G",
             image: "images/samsung-galaxy-a26-5g.jpg"
@@ -324,7 +286,8 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "SAMSUNG",
             name: "GALAXY S25",
             category: "Phones",
-            description: "Flagship performance • Galaxy AI • Premium camera system",
+            description:
+                "Flagship smartphone • Premium performance • Advanced camera",
             price: "Contact for Price",
             badge: "FLAGSHIP",
             image: "images/samsung-galaxy-s25.jpg"
@@ -335,7 +298,8 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "SAMSUNG",
             name: "GALAXY S25 ULTRA",
             category: "Phones",
-            description: "Ultra flagship • Galaxy AI • Advanced camera • S Pen",
+            description:
+                "Ultra flagship • Advanced camera • Premium performance",
             price: "Contact for Price",
             badge: "ULTRA",
             image: "images/samsung-galaxy-s25-ultra.jpg"
@@ -346,24 +310,25 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "SAMSUNG",
             name: "GALAXY S25 PLUS",
             category: "Phones",
-            description: "Premium Galaxy performance • Large AMOLED display",
+            description:
+                "Premium display • Powerful performance • Advanced smartphone",
             price: "Contact for Price",
             badge: "PREMIUM",
             image: "images/samsung-galaxy-s25-plus.jpg"
         },
 
 
-        /* =================================================
+        /* =========================
            VIVO
-           MATCHES YOUR GITHUB IMAGES FOLDER
-        ================================================= */
+           ========================= */
 
         {
             id: 24,
             brand: "VIVO",
             name: "V50",
             category: "Phones",
-            description: "Premium smartphone • Powerful performance • Advanced camera",
+            description:
+                "Premium smartphone • Powerful performance • Advanced camera",
             price: "Contact for Price",
             badge: "NEW",
             image: "images/vivo-v50.jpg"
@@ -374,7 +339,8 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "VIVO",
             name: "V50 LITE",
             category: "Phones",
-            description: "Stylish design • Smooth display • Powerful everyday performance",
+            description:
+                "Stylish design • Smooth display • Powerful everyday performance",
             price: "Contact for Price",
             badge: "POPULAR",
             image: "images/vivo-v50-lite.jpg"
@@ -385,7 +351,8 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "VIVO",
             name: "V40",
             category: "Phones",
-            description: "Premium design • Powerful performance • Advanced camera",
+            description:
+                "Premium design • Powerful performance • Advanced camera",
             price: "Contact for Price",
             badge: "PREMIUM",
             image: "images/vivo-v40.jpg"
@@ -396,7 +363,8 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "VIVO",
             name: "V40 LITE",
             category: "Phones",
-            description: "Stylish design • Smooth performance • Great everyday camera",
+            description:
+                "Stylish design • Smooth performance • Great everyday camera",
             price: "Contact for Price",
             badge: "NEW",
             image: "images/vivo-v40-lite.jpg"
@@ -407,7 +375,8 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "VIVO",
             name: "Y39 5G",
             category: "Phones",
-            description: "5G smartphone • Powerful battery • Smooth everyday performance",
+            description:
+                "5G smartphone • Powerful battery • Smooth everyday performance",
             price: "Contact for Price",
             badge: "5G",
             image: "images/vivo-y39-5g.jpg"
@@ -418,7 +387,8 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "VIVO",
             name: "Y29 5G",
             category: "Phones",
-            description: "5G smartphone • Long-lasting battery • Powerful everyday performance",
+            description:
+                "5G smartphone • Long-lasting battery • Powerful everyday performance",
             price: "Contact for Price",
             badge: "HOT",
             image: "images/vivo-y29-5g.jpg"
@@ -429,7 +399,8 @@ document.addEventListener("DOMContentLoaded", () {
             brand: "VIVO",
             name: "Y19S",
             category: "Phones",
-            description: "Reliable smartphone • Long-lasting battery • Great everyday performance",
+            description:
+                "Reliable smartphone • Long-lasting battery • Great everyday performance",
             price: "Contact for Price",
             badge: "VALUE",
             image: "images/vivo-y19s.jpg"
@@ -439,431 +410,578 @@ document.addEventListener("DOMContentLoaded", () {
 
 
     /* =====================================================
-       PRODUCT GRID
-    ===================================================== */
+       DOM ELEMENTS
+       ===================================================== */
 
-    const productGrid =
+    const productsGrid =
         document.querySelector(".products-grid");
+
+    const brandFilters =
+        document.querySelectorAll("[data-brand-filter]");
+
+    const searchButton =
+        document.getElementById("searchButton");
+
+    const searchBox =
+        document.getElementById("searchBox");
+
+    const searchInput =
+        document.getElementById("searchInput");
+
+    const mobileMenuButton =
+        document.getElementById("mobileMenuButton");
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+    const header =
+        document.querySelector(".site-header");
 
 
     /* =====================================================
-       CREATE PRODUCT CARD
-    ===================================================== */
+       CURRENT FILTER
+       ===================================================== */
+
+    let currentBrand = "all";
+    let currentSearch = "";
+
+
+    /* =====================================================
+       WHATSAPP ORDER
+       ===================================================== */
+
+    function orderOnWhatsApp(product) {
+
+        const message =
+            `Hello MAX-MOBILE & General Dealers.%0A%0A` +
+            `I am interested in the ${product.brand} ${product.name}.%0A%0A` +
+            `Please send me:%0A` +
+            `• Current price%0A` +
+            `• Available colours%0A` +
+            `• Stock availability%0A%0A` +
+            `Thank you.`;
+
+        const url =
+            `https://wa.me/${whatsappNumber}?text=${message}`;
+
+        window.open(
+            url,
+            "_blank",
+            "noopener,noreferrer"
+        );
+    }
+
+
+    /* =====================================================
+       PRODUCT CARD
+       ===================================================== */
 
     function createProductCard(product) {
 
-        return `
-            <article
-                class="product-card"
-                data-brand="${product.brand.toLowerCase()}"
-                data-name="${product.name.toLowerCase()}"
-            >
+        const card =
+            document.createElement("article");
 
-                <div class="product-image">
+        card.className = "product-card";
 
-                    <span class="product-badge">
-                        ${product.badge}
-                    </span>
+        card.innerHTML = `
+            <div class="product-image">
 
-                    <img
-                        src="${product.image}"
-                        alt="${product.brand} ${product.name}"
-                        loading="lazy"
-                        onerror="
-                            this.style.display='none';
-                            this.parentElement.classList.add('image-missing');
-                        "
-                    >
-
-                    <div class="phone-placeholder">
-                        <i class="fas fa-mobile-screen-button"></i>
-                    </div>
-
+                <div class="product-badge">
+                    ${escapeHTML(product.badge)}
                 </div>
 
+                <img
+                    src="${escapeHTML(product.image)}"
+                    alt="${escapeHTML(product.brand + " " + product.name)}"
+                    loading="lazy"
+                >
 
-                <div class="product-info">
+                <div class="phone-placeholder">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
 
-                    <span class="product-brand">
-                        ${product.brand}
-                    </span>
+            </div>
 
-                    <h3>
-                        ${product.name}
-                    </h3>
+            <div class="product-info">
 
-                    <p class="product-description">
-                        ${product.description}
-                    </p>
+                <div class="product-brand">
+                    ${escapeHTML(product.brand)}
+                </div>
 
-                    <div class="product-bottom">
+                <h3>
+                    ${escapeHTML(product.name)}
+                </h3>
 
-                        <strong class="product-price">
-                            ${product.price}
-                        </strong>
+                <p class="product-description">
+                    ${escapeHTML(product.description)}
+                </p>
 
+                <div class="product-bottom">
+
+                    <div class="product-price">
+                        ${escapeHTML(product.price)}
                     </div>
-
 
                     <div class="product-actions">
 
                         <button
+                            type="button"
                             class="order-button"
-                            data-product="${product.brand} ${product.name}"
+                            data-product-id="${product.id}"
                         >
-                            <i class="fab fa-whatsapp"></i>
-                            ORDER NOW
+                            <i class="fa-brands fa-whatsapp"></i>
+                            ORDER ON WHATSAPP
                         </button>
 
                     </div>
 
                 </div>
 
-            </article>
+            </div>
         `;
 
+
+        /* IMAGE ERROR */
+        const image =
+            card.querySelector("img");
+
+        const imageArea =
+            card.querySelector(".product-image");
+
+        const placeholder =
+            card.querySelector(".phone-placeholder");
+
+        image.addEventListener("error", () => {
+
+            imageArea.classList.add("image-missing");
+
+            if (placeholder) {
+                placeholder.style.display = "grid";
+            }
+
+        });
+
+
+        image.addEventListener("load", () => {
+
+            if (placeholder) {
+                placeholder.style.display = "none";
+            }
+
+        });
+
+
+        /* ORDER BUTTON */
+        const orderButton =
+            card.querySelector(".order-button");
+
+        orderButton.addEventListener("click", () => {
+            orderOnWhatsApp(product);
+        });
+
+
+        return card;
+    }
+
+
+    /* =====================================================
+       ESCAPE HTML
+       ===================================================== */
+
+    function escapeHTML(value) {
+
+        return String(value)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
     }
 
 
     /* =====================================================
        RENDER PRODUCTS
-    ===================================================== */
+       ===================================================== */
 
-    function renderProducts(list = products) {
+    function renderProducts() {
 
-        if (!productGrid) return;
+        if (!productsGrid) {
+            return;
+        }
+
+        productsGrid.innerHTML = "";
 
 
-        if (list.length === 0) {
+        const searchTerm =
+            currentSearch
+                .trim()
+                .toLowerCase();
 
-            productGrid.innerHTML = `
-                <div class="no-products">
 
-                    <i class="fas fa-search"></i>
+        const filteredProducts =
+            products.filter(product => {
 
-                    <h3>
-                        No products found
-                    </h3>
+                const brandMatch =
+                    currentBrand === "all" ||
+                    product.brand.toLowerCase() ===
+                    currentBrand.toLowerCase();
 
-                    <p>
-                        Try searching for another phone or brand.
-                    </p>
 
-                </div>
+                const searchMatch =
+                    !searchTerm ||
+                    product.brand.toLowerCase().includes(searchTerm) ||
+                    product.name.toLowerCase().includes(searchTerm) ||
+                    product.description.toLowerCase().includes(searchTerm);
+
+
+                return brandMatch && searchMatch;
+            });
+
+
+        if (filteredProducts.length === 0) {
+
+            const noProducts =
+                document.createElement("div");
+
+            noProducts.className = "no-products";
+
+            noProducts.innerHTML = `
+                <i class="fa-solid fa-mobile-screen-button"></i>
+
+                <h3>
+                    No phones found
+                </h3>
+
+                <p>
+                    Try another brand or search term.
+                </p>
             `;
 
-            return;
+            productsGrid.appendChild(noProducts);
 
+            return;
         }
 
 
-        productGrid.innerHTML =
-            list.map(createProductCard).join("");
+        filteredProducts.forEach(product => {
 
-
-        setupOrderButtons();
-
-    }
-
-
-    /* =====================================================
-       WHATSAPP ORDER BUTTONS
-    ===================================================== */
-
-    function setupOrderButtons() {
-
-        document
-            .querySelectorAll(".order-button")
-            .forEach(button => {
-
-                button.addEventListener("click", () => {
-
-                    const productName =
-                        button.dataset.product ||
-                        "mobile phone";
-
-
-                    const message =
-                        `Hello Max Mobile and General Dealers. I am interested in the ${productName}. Please send me the current price, available colours and stock availability.`;
-
-
-                    const whatsappURL =
-                        `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-
-
-                    window.open(
-                        whatsappURL,
-                        "_blank"
-                    );
-
-                });
-
-            });
-
-    }
-
-
-    /* =====================================================
-       SEARCH
-    ===================================================== */
-
-    if (searchInput) {
-
-        searchInput.addEventListener("input", () => {
-
-            const query =
-                searchInput.value
-                    .toLowerCase()
-                    .trim();
-
-
-            if (!query) {
-
-                renderProducts(products);
-
-                return;
-
-            }
-
-
-            const filteredProducts =
-                products.filter(product => {
-
-                    return (
-
-                        product.brand
-                            .toLowerCase()
-                            .includes(query)
-
-                        ||
-
-                        product.name
-                            .toLowerCase()
-                            .includes(query)
-
-                        ||
-
-                        product.description
-                            .toLowerCase()
-                            .includes(query)
-
-                    );
-
-                });
-
-
-            renderProducts(filteredProducts);
+            productsGrid.appendChild(
+                createProductCard(product)
+            );
 
         });
-
     }
 
 
     /* =====================================================
        BRAND FILTERS
-    ===================================================== */
+       ===================================================== */
 
-    document
-        .querySelectorAll("[data-brand-filter]")
-        .forEach(button => {
+    brandFilters.forEach(button => {
 
-            button.addEventListener("click", () => {
+        button.addEventListener("click", () => {
 
-                const selectedBrand =
-                    button.dataset.brandFilter
-                        .toLowerCase();
+            currentBrand =
+                button.dataset.brandFilter || "all";
 
 
-                document
-                    .querySelectorAll("[data-brand-filter]")
-                    .forEach(btn => {
-
-                        btn.classList.remove("active");
-
-                    });
-
-
-                button.classList.add("active");
-
-
-                if (selectedBrand === "all") {
-
-                    renderProducts(products);
-
-                    return;
-
-                }
-
-
-                const filteredProducts =
-                    products.filter(product =>
-
-                        product.brand
-                            .toLowerCase() ===
-                        selectedBrand
-
-                    );
-
-
-                renderProducts(filteredProducts);
-
+            brandFilters.forEach(filter => {
+                filter.classList.remove("active");
             });
+
+
+            button.classList.add("active");
+
+
+            renderProducts();
+
+
+            const phonesSection =
+                document.getElementById("phones");
+
+            if (phonesSection) {
+
+                phonesSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }
 
         });
 
+    });
+
 
     /* =====================================================
-       SMOOTH SCROLL
-    ===================================================== */
+       SEARCH BUTTON
+       ===================================================== */
 
-    document
-        .querySelectorAll('a[href^="#"]')
-        .forEach(link => {
+    if (searchButton && searchBox) {
 
-            link.addEventListener("click", event => {
+        searchButton.addEventListener("click", () => {
 
-                const targetID =
-                    link.getAttribute("href");
+            searchBox.classList.toggle("active");
 
 
-                const target =
-                    document.querySelector(targetID);
+            if (searchBox.classList.contains("active")) {
+
+                if (searchInput) {
+                    searchInput.focus();
+                }
+
+            }
+
+        });
+
+    }
 
 
-                if (!target) return;
+    /* =====================================================
+       SEARCH INPUT
+       ===================================================== */
+
+    if (searchInput) {
+
+        searchInput.addEventListener(
+            "input",
+            () => {
+
+                currentSearch =
+                    searchInput.value;
+
+                renderProducts();
+
+            }
+        );
+
+    }
 
 
-                event.preventDefault();
+    /* =====================================================
+       MOBILE MENU
+       ===================================================== */
+
+    if (mobileMenuButton && mobileMenu) {
+
+        mobileMenuButton.addEventListener(
+            "click",
+            () => {
+
+                const isActive =
+                    mobileMenu.classList.toggle("active");
 
 
-                target.scrollIntoView({
+                mobileMenuButton.setAttribute(
+                    "aria-expanded",
+                    String(isActive)
+                );
 
-                    behavior: "smooth",
 
-                    block: "start"
+                const icon =
+                    mobileMenuButton.querySelector("i");
+
+
+                if (icon) {
+
+                    if (isActive) {
+
+                        icon.classList.remove(
+                            "fa-bars"
+                        );
+
+                        icon.classList.add(
+                            "fa-xmark"
+                        );
+
+                    } else {
+
+                        icon.classList.remove(
+                            "fa-xmark"
+                        );
+
+                        icon.classList.add(
+                            "fa-bars"
+                        );
+
+                    }
+
+                }
+
+            }
+        );
+
+
+        /* CLOSE MOBILE MENU AFTER CLICK */
+
+        mobileMenu
+            .querySelectorAll("a")
+            .forEach(link => {
+
+                link.addEventListener("click", () => {
+
+                    mobileMenu.classList.remove(
+                        "active"
+                    );
+
+                    mobileMenuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+
+                    const icon =
+                        mobileMenuButton.querySelector("i");
+
+
+                    if (icon) {
+
+                        icon.classList.remove(
+                            "fa-xmark"
+                        );
+
+                        icon.classList.add(
+                            "fa-bars"
+                        );
+
+                    }
 
                 });
 
             });
 
-        });
+    }
 
 
     /* =====================================================
        HEADER SCROLL
-    ===================================================== */
+       ===================================================== */
 
-    const header =
-        document.querySelector(".site-header");
+    if (header) {
 
+        function handleHeaderScroll() {
 
-    window.addEventListener("scroll", () => {
+            if (window.scrollY > 20) {
 
-        if (!header) return;
+                header.classList.add("scrolled");
 
+            } else {
 
-        if (window.scrollY > 50) {
+                header.classList.remove("scrolled");
 
-            header.classList.add("scrolled");
-
-        } else {
-
-            header.classList.remove("scrolled");
+            }
 
         }
 
-    });
+
+        window.addEventListener(
+            "scroll",
+            handleHeaderScroll,
+            { passive: true }
+        );
+
+
+        handleHeaderScroll();
+
+    }
 
 
     /* =====================================================
-       ACTIVE NAVIGATION
-    ===================================================== */
+       ACTIVE DESKTOP NAV
+       ===================================================== */
 
-    const sections =
-        document.querySelectorAll("section[id]");
-
-
-    const navLinks =
-        document.querySelectorAll(".desktop-nav a");
+    const desktopLinks =
+        document.querySelectorAll(
+            ".desktop-nav a"
+        );
 
 
-    window.addEventListener("scroll", () => {
+    desktopLinks.forEach(link => {
 
-        let currentSection = "";
+        link.addEventListener("click", () => {
 
-
-        sections.forEach(section => {
-
-            const sectionTop =
-                section.offsetTop - 180;
-
-
-            if (window.scrollY >= sectionTop) {
-
-                currentSection =
-                    section.getAttribute("id");
-
-            }
-
-        });
-
-
-        navLinks.forEach(link => {
-
-            link.classList.remove("active");
-
-
-            if (
-                link.getAttribute("href") ===
-                `#${currentSection}`
-            ) {
-
-                link.classList.add("active");
-
-            }
-
-        });
-
-    });
-
-
-    /* =====================================================
-       IMAGE ERROR HANDLING
-    ===================================================== */
-
-    document
-        .querySelectorAll("img")
-        .forEach(img => {
-
-            img.addEventListener("error", () => {
-
-                img.classList.add("image-error");
-
+            desktopLinks.forEach(item => {
+                item.classList.remove("active");
             });
 
+            link.classList.add("active");
+
+        });
+
+    });
+
+
+    /* =====================================================
+       SMOOTH SCROLL
+       ===================================================== */
+
+    document
+        .querySelectorAll('a[href^="#"]')
+        .forEach(link => {
+
+            link.addEventListener(
+                "click",
+                event => {
+
+                    const targetID =
+                        link.getAttribute("href");
+
+
+                    if (
+                        !targetID ||
+                        targetID === "#"
+                    ) {
+                        return;
+                    }
+
+
+                    const target =
+                        document.querySelector(targetID);
+
+
+                    if (target) {
+
+                        event.preventDefault();
+
+                        target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+
+                    }
+
+                }
+            );
+
         });
 
 
     /* =====================================================
-       START CATALOGUE
-    ===================================================== */
+       INITIAL LOAD
+       ===================================================== */
 
     renderProducts();
 
 
-    document.body.classList.add("page-loaded");
+    /* =====================================================
+       PAGE LOADED
+       ===================================================== */
+
+    requestAnimationFrame(() => {
+
+        document.body.classList.add(
+            "page-loaded"
+        );
+
+    });
 
 
     /* =====================================================
-       CONSOLE CONFIRMATION
-    ===================================================== */
+       CONSOLE
+       ===================================================== */
 
     console.log(
-        "MAX MOBILE — 30-PHONE CATALOGUE LOADED SUCCESSFULLY."
-    );
-
-    console.log(
-        "TECNO: 4 | INFINIX: 5 | ITEL: 8 | SAMSUNG: 6 | VIVO: 7"
+        `MAX-MOBILE catalogue loaded successfully: ${products.length} phones`
     );
 
 });
